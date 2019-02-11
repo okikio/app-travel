@@ -1,0 +1,18 @@
+{
+  "name": "travel",
+  "version": "1.0.0",
+  "description": "A test travel website.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Travel",
+    "site",
+    "web",
+    "node"
+  ],
+  "author": "Okiki Ojo",
+  "license": "ISC"
+}
