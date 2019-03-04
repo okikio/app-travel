@@ -1,18 +1,50 @@
 {
-  "name": "travel",
-  "version": "1.0.0",
-  "description": "A test travel website.",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Travel",
-    "site",
-    "web",
-    "node"
-  ],
-  "author": "Okiki Ojo",
-  "license": "ISC"
+    "name": "travel",
+    "version": "1.0.0",
+    "description": "A test travel website.",
+    "private": true,
+    "main": "app.js",
+    "bin": {
+        "build-watch": "./bin/build-watch.js",
+        "git-run": "./bin/git-run.js",
+        "compile": "./bin/compile.js",
+        "build": "./bin/build.js"
+    },
+    "scripts": {
+        "dev": "nodemon ./server",
+        "start": "node ./server",
+        "build": "node ./bin/build",
+        "build-watch": "node ./bin/build-watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Travel",
+        "site",
+        "web",
+        "node"
+    ],
+    "author": "Okiki Ojo",
+    "license": "GPL-3.0",
+    "dependencies": {
+        "compression": "1.7.2",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.9",
+        "express": "4.16.3",
+        "http-errors": "1.6.3",
+        "morgan": "^1.9.1",
+        "pug": "^2.0.3",
+        "underscore": "^1.9.1"
+    },
+    "devDependencies": {
+        "colors": "^1.3.2",
+        "gulp": "^4.0.0",
+        "gulp-csso": "^3.0.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-uglify": "^3.0.1",
+        "heroku": "^7.19.4",
+        "log-timestamp": "^0.2.1",
+        "node-watch": "^0.5.9",
+        "nodemon": "^1.18.7",
+        "shelljs": "^0.8.3"
+    }
 }

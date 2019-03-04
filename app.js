@@ -1,72 +1,50 @@
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
-var zlib = require('zlib');
-var PORT = process.env.PORT || 8080;
+var cookieParser = require('cookie-parser');
+var createError = require('http-errors');
+var compress = require('compression');
+var express = require('express');
+var logger = require('morgan');
+var _ = require("underscore");
+var path = require('path');
 
-http.createServer(function(req, res) {
-    console.log("request ", req.url);
+// List of routers 
+var Router = require('./util/router');
+var app = express();
 
-    var filePath = '.' + req.url;
-    if (filePath == './') { filePath = "./index.min.html"; }
+// List of routes and routers
+var routes = require("./data/render.min");
+var routeList = routes["routes"];
+var routers = routes["routers"];
+var error = routes["error"];
 
-    var extname = String(path.extname(filePath)).toLocaleLowerCase();
-    var mimeTypes = {
-        '.html': 'text/html',
-        '.js': 'text/javascript',
-        '.css': 'text/css',
-        '.json': 'application/json',
-        '.png': 'image/png',
-        '.jpg': 'image/jpg',
-        '.gif': 'image/gif',
-        '.wav': 'audio/wav',
-        '.mp4': 'video/mp4',
-        '.woff': 'application/font-woff',
-        '.ttf': 'application/font-ttf',
-        '.eot': 'application/vnd.ms-fontobject',
-        '.otf': 'application/font-otf',
-        '.svg': 'application/image/svg+xml'
-    };
+// Compress/GZIP Server
+app.use(compress());
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1 day' }));
 
-    var contentType = mimeTypes[extname] || 'application/octet-stream';
+// View engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+app.set('view cache', true);
 
-    fs.readFile(filePath, function(err, content) {
-        if (err) {
-            if (err.code == 'ENONET') {
-                fs.readFile('./404.html', function(err, content) {
-                    if (err) { console.log("Error loading 404 page"); }
-                    res.writeHead(200, { 'Content-Type': contentType });
-                    res.end(content, 'utf-8');
-                });
-            }
-            else {
-                res.writeHead(500);
-                res.end('Sorry, check with the site admin for error: ' + err.code + '..\n');
-                res.end();
-            }
-        } else {
-            var raw = fs.createReadStream(filePath.replace("./", ""));
-            var acceptEncoding = req.headers['accept-encoding'];
-            if (!acceptEncoding) { acceptEncoding = ''; }
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
-            // Note: This is not a conformant accept-encoding parser.
-            // See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3
-            if (/\bdeflate\b/.test(acceptEncoding)) {
-                res.writeHead(200, { 'Content-Type': contentType, 'Content-Encoding': 'deflate' });
-                raw.pipe(zlib.createDeflate()).pipe(res);
-            } else if (/\bgzip\b/.test(acceptEncoding)) {
-                res.writeHead(200, { 'Content-Type': contentType, 'Content-Encoding': 'gzip' });
-                raw.pipe(zlib.createGzip()).pipe(res);
-            } else if (/\bbr\b/.test(acceptEncoding)) {
-                res.writeHead(200, { 'Content-Type': contentType, 'Content-Encoding': 'br' });
-                raw.pipe(zlib.createBrotliCompress()).pipe(res);
-            } else {
-                res.writeHead(200, { 'Content-Type': contentType });
-                raw.pipe(res);
-            }
-            // res.writeHead(200, { 'Content-Type': contentType });
-            // res.end(content, 'utf-8');
-        }
-    });
-}).listen(PORT);
-console.log('Server running at http://127.0.0.1:' + PORT + '/');
+// Set route to routers 
+_.each(routeList, function(route, path, obj) {
+    app.use(path, Router(routers, route));
+});
+
+// 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
+
+// Error handler
+app.use(function(err, req, res, next) {
+    // Render the error page
+    res.status(err.status || 500);
+    res.render('templates/error', error);
+});
+
+module.exports = app;

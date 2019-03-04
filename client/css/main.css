@@ -1,7 +1,3 @@
-/* -- Variables & Mixins */
-
-/* -- Elements -- */
-
 *,
 *:before,
 *:after {
@@ -11,22 +7,22 @@
     resize: none;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
-@media (min-width: 300px) {
+@media (min-width:300px) {
     *,
     *:before,
     *:after {
-        word-wrap: break-word;
+        word-wrap: break-word
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width:300px) {
     *,
     *:before,
     *:after {
-        word-break: break-all;
+        word-break: break-all
     }
 }
 
@@ -34,30 +30,29 @@
 ::-moz-selection {
     background: #131313;
     z-index: 325;
-    color: #fff;
+    color: #fff
 }
 
 ::-moz-selection,
 ::selection {
     background: #131313;
     z-index: 325;
-    color: #fff;
+    color: #fff
 }
 
 html {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 html,
 body {
-    font-family: "Montserrat", "Helvetica", "Helvetica Neue", "Arial",
-    sans-serif;
+    font-family: "Montserrat", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
     transition: all 0.2s ease;
-    background: #ffffff;
+    background: #fff;
     line-height: 1.15;
     font-weight: 400;
     font-size: 15px;
-    color: #000;
+    color: #000
 }
 
 h1,
@@ -70,44 +65,44 @@ h6 {
     line-height: 1.15;
     font-weight: 400;
     color: inherit;
-    display: block;
+    display: block
 }
 
 h1 {
     margin: 2.1rem 0 1.68rem 0;
     font-size: 4.2rem;
-    font-weight: 900;
+    font-weight: 900
 }
 
 h2 {
     margin: 1.78rem 0 1.424rem 0;
     font-size: 3.56rem;
-    font-weight: 700;
+    font-weight: 700
 }
 
 h3 {
     margin: 1.46rem 0 1.168rem 0;
     font-size: 2.92rem;
-    font-weight: 600;
+    font-weight: 600
 }
 
 h4 {
-    margin: 1.14rem 0 0.912rem 0;
-    font-size: 2.28rem;
+    margin: 1.14rem 0 .912rem 0;
+    font-size: 2.28rem
 }
 
 h5 {
-    margin: 0.82rem 0 0.656rem 0;
-    font-size: 1.64rem;
+    margin: .82rem 0 .656rem 0;
+    font-size: 1.64rem
 }
 
 h6 {
-    margin: 0.5rem 0 0.4rem 0;
-    font-size: 1rem;
+    margin: .5rem 0 .4rem 0;
+    font-size: 1rem
 }
 
 p {
-    margin: 0 2em 10px 2em;
+    margin: 0 2em 10px 2em
 }
 
 hr {
@@ -116,11 +111,11 @@ hr {
     border-width: 1px;
     overflow: visible;
     display: block;
-    height: 0;
+    height: 0
 }
 
 small {
-    font-size: 85%;
+    font-size: 85%
 }
 
 img,
@@ -128,25 +123,25 @@ load-img {
     vertical-align: middle;
     min-width: 100%;
     height: 200px;
-    width: 100%;
+    width: 100%
 }
 
 load-img {
     -webkit-animation: load, 0.5s, ease-in, infinite, alternate;
     animation: load, 0.5s, ease-in, infinite, alternate;
     background: #252b33;
-    min-height: 300px;
+    min-height: 300px
 }
 
 @-webkit-keyframes load {
     to {
-        background: #51637c;
+        background: #51637c
     }
 }
 
 @keyframes load {
     to {
-        background: #51637c;
+        background: #51637c
     }
 }
 
@@ -157,13 +152,13 @@ a {
     display: inline-block;
     overflow: hidden;
     cursor: pointer;
-    color: #f36;
+    color: #f36
 }
 
 a:hover,
 a:focus {
     text-decoration: underline;
-    color: #cf2953;
+    color: #cf2953
 }
 
 ul,
@@ -172,28 +167,28 @@ menu,
 dir {
     list-style-type: disc;
     margin: 20px 2em;
-    display: block;
+    display: block
 }
 
 ol {
-    list-style-type: decimal;
+    list-style-type: decimal
 }
 
 ul ul,
 ol ul {
-    list-style-type: circle;
+    list-style-type: circle
 }
 
 ol ol ul,
 ol ul ul,
 ul ol ul,
 ul ul ul {
-    list-style-type: square;
+    list-style-type: square
 }
 
 li {
     text-align: inherit;
-    display: list-item;
+    display: list-item
 }
 
 hr {
@@ -202,44 +197,40 @@ hr {
     border-width: 1px;
     overflow: visible;
     display: block;
-    height: 0;
+    height: 0
 }
 
-/* -- Styles -- */
-
 .style-bold {
-    font-weight: 700;
+    font-weight: 700
 }
 
 .style-red {
-    color: #f36;
+    color: #f36
 }
 
 .style-left {
-    text-align: left;
+    text-align: left
 }
 
 .style-center {
-    text-align: center;
+    text-align: center
 }
 
 .style-right {
-    text-align: right;
+    text-align: right
 }
 
 .style-capital {
-    text-transform: capitalize;
+    text-transform: capitalize
 }
 
 .style-uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .style-lowercase {
-    text-transform: lowercase;
+    text-transform: lowercase
 }
-
-/* -- Icons & Font -- */
 
 .material-icons,
 .mi,
@@ -256,7 +247,7 @@ hr {
     text-decoration: none;
     text-transform: none;
     white-space: nowrap;
-    font-weight: normal;
+    font-weight: 400;
     position: relative;
     font-size: inherit;
     font-style: normal;
@@ -264,7 +255,7 @@ hr {
     line-height: 1;
     direction: ltr;
     height: 1em;
-    width: 1em;
+    width: 1em
 }
 
 .icon-btn {
@@ -284,21 +275,19 @@ hr {
     display: flex;
     z-index: 425;
     height: 40px;
-    width: 40px;
+    width: 40px
 }
 
 .icon-btn .icon,
 .icon-btn:hover {
-    text-transform: none !important;
+    text-transform: none!important;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 24px
 }
 
 .icon-btn:hover {
-    background: gray;
+    background: gray
 }
-
-/* -- Navigation -- */
 
 .navbar {
     justify-content: flex-start;
@@ -313,36 +302,36 @@ hr {
     z-index: 1200;
     min-height: 45px;
     height: 0;
-    width: 100%;
+    width: 100%
 }
 
 .navbar.nav-white:hover,
 .navbar:not(.nav2).navbar-list-show.nav-white {
-    background: #fff;
+    background: #fff
 }
 
 .navbar.nav-black:hover,
 .navbar:not(.nav2).navbar-list-show.nav-black {
-    background: #000;
+    background: #000
 }
 
 .navbar.nav-white:hover li.navbar-link a,
 .navbar.nav-white:hover .navbar-menu,
 .navbar:not(.nav2).navbar-list-show.nav-white li.navbar-link a {
-    color: #000 !important;
+    color: #000!important
 }
 
 .navbar.nav-black:hover li.navbar-link a,
 .navbar.nav-black:hover .navbar-menu,
 .navbar:not(.nav2).navbar-list-show.nav-black li.navbar-link a {
-    color: #fff !important;
+    color: #fff!important
 }
 
 .navbar-fixed {
     max-height: 100vh;
     position: fixed;
     left: 0;
-    top: 0;
+    top: 0
 }
 
 .navbar-layout {
@@ -352,7 +341,7 @@ hr {
     margin: 0 auto;
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 100%
 }
 
 .navbar-head {
@@ -360,12 +349,12 @@ hr {
     align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    display: flex;
+    display: flex
 }
 
 .navbar-title {
-    font-family: "Helvetica", "Arial", sans-serif !important;
-    letter-spacing: 0.02em;
+    font-family: "Helvetica", "Arial", sans-serif!important;
+    letter-spacing: .02em;
     text-decoration: none;
     border-radius: 2px;
     position: relative;
@@ -373,7 +362,7 @@ hr {
     font-size: 20px;
     flex-shrink: 0;
     margin: 5px 0;
-    color: #444;
+    color: #444
 }
 
 .navbar-logo {
@@ -381,18 +370,18 @@ hr {
     border-radius: 2px;
     display: block;
     height: auto;
-    width: 100%;
+    width: 100%
 }
 
 .navbar-spacer {
-    flex: 1;
+    flex: 1
 }
 
 .navbar:not(.nav2) .navbar-main {
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 100%;
+    width: 100%
 }
 
 ul.navbar-list {
@@ -402,14 +391,14 @@ ul.navbar-list {
     white-space: nowrap;
     list-style: none;
     display: flex;
-    margin: 0;
+    margin: 0
 }
 
 li.navbar-link a {
     line-height: 45px;
     letter-spacing: 2px;
     font-family: "Montserrat", sans-serif;
-    word-break: keep-all !important;
+    word-break: keep-all!important;
     text-decoration: none;
     vertical-align: middle;
     align-self: center;
@@ -417,15 +406,15 @@ li.navbar-link a {
     font-weight: 700;
     font-size: 12px;
     display: block;
-    color: #000;
+    color: #000
 }
 
 li.nav-white.navbar-link a {
-    color: #fff !important;
+    color: #fff!important
 }
 
 li.nav-black.navbar-link a {
-    color: #000 !important;
+    color: #000!important
 }
 
 .navbar-foot {
@@ -436,45 +425,45 @@ li.nav-black.navbar-link a {
     display: flex;
     height: 40px;
     left: 0;
-    top: 0;
+    top: 0
 }
 
 .navbar-menu {
     font-size: 22px;
-    color: #000;
+    color: #000
 }
 
 .navbar-menu.nav-black {
-    color: #000;
+    color: #000
 }
 
 .navbar-menu.nav-white {
-    color: #fff;
+    color: #fff
 }
 
 .navbar-menu:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, .2);
     font-size: 22px;
-    color: #000;
+    color: #000
 }
 
 .nav2.navbar {
     height: 100%;
-    width: 50px;
+    width: 50px
 }
 
 .nav2 .navbar-fixed {
-    max-height: 100vh;
+    max-height: 100vh
 }
 
 .nav2 .navbar-layout {
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: flex
 }
 
 .nav2 ul.navbar-list {
-    flex-direction: column;
+    flex-direction: column
 }
 
 .nav2 li.navbar-link a {
@@ -483,7 +472,7 @@ li.nav-black.navbar-link a {
     writing-mode: vertical-lr;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    padding: 12px;
+    padding: 12px
 }
 
 .navbar:not(.nav2) {
@@ -492,7 +481,7 @@ li.nav-black.navbar-link a {
     width: 40px;
     left: 7.5px;
     top: 7.5px;
-    border-radius: 100%;
+    border-radius: 100%
 }
 
 .navbar:not(.nav2).navbar-list-show {
@@ -501,30 +490,30 @@ li.nav-black.navbar-link a {
     width: 200vw;
     border-radius: 0;
     left: -50vw;
-    top: -50vw;
+    top: -50vw
 }
 
 .navbar:not(.nav2) .navbar-layout {
     position: absolute;
-    padding: 0px;
+    padding: 0;
     flex-direction: row;
     margin: 0;
     height: 100vh;
     width: 100vw;
     left: 0;
-    top: 0;
+    top: 0
 }
 
 .navbar:not(.nav2).navbar-list-show .navbar-layout {
     left: calc(50vw + 7.5px);
-    top: calc(50vw + 7.5px);
+    top: calc(50vw + 7.5px)
 }
 
 .navbar:not(.nav2) .navbar-link {
-    opacity: 0;
+    opacity: 0
 }
 
-@media (min-width: 600px) {
+@media (min-width:600px) {
     .navbar:not(.nav2),
     .navbar:not(.nav2).navbar-list-show {
         height: 0;
@@ -532,53 +521,47 @@ li.nav-black.navbar-link a {
         width: 0;
         border-radius: 100%;
         left: 20px;
-        top: 20px;
+        top: 20px
     }
     .navbar:not(.nav2).navbar-list-show .navbar-layout {
         left: 0;
-        top: 0;
+        top: 0
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
     li.navbar-link a {
-        color: #fff;
+        color: #fff
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .nav2.navbar {
         min-height: 10%;
-        width: 0;
+        width: 0
     }
-
     .navbar.nav-white {
-        background: #fff;
+        background: #fff
     }
-
     .navbar.nav-black {
-        background: #000;
+        background: #000
     }
-
     .navbar.nav-black .navbar-menu {
-        color: #fff;
+        color: #fff
     }
-
     .navbar.nav-white .navbar-menu {
-        color: #000;
+        color: #000
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width:450px) {
     .navbar:not(.nav2) ul.navbar-list {
         flex-direction: column;
         max-height: 100%;
         min-height: 100%;
-        height: 100%;
+        height: 100%
     }
 }
-
-/* -- Main Content -- */
 
 .main {
     position: relative;
@@ -586,10 +569,8 @@ li.nav-black.navbar-link a {
     background: #fff;
     display: block;
     width: 100%;
-    z-index: 25;
+    z-index: 25
 }
-
-/* -- Layout -- */
 
 .layout {
     padding-bottom: 100px;
@@ -600,19 +581,19 @@ li.nav-black.navbar-link a {
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
 .layout-enlarge,
 .layout-enlarge-vert {
     padding-bottom: 180px;
-    padding-top: 180px;
+    padding-top: 180px
 }
 
 .layout-enlarge,
 .layout-enlarge-horz {
     padding-right: 120px;
-    padding-left: 120px;
+    padding-left: 120px
 }
 
 .layout-shorten,
@@ -621,7 +602,7 @@ li.nav-black.navbar-link a {
     padding-top: 50px;
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
 .layout-shorten,
@@ -630,10 +611,10 @@ li.nav-black.navbar-link a {
     padding-left: 50px;
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
-@media (max-width: 400px) {
+@media (max-width:400px) {
     .layout {
         padding-bottom: 50px;
         padding-right: 40px;
@@ -643,312 +624,301 @@ li.nav-black.navbar-link a {
         overflow: hidden;
         display: block;
         margin: 0 auto;
-        width: 100%;
+        width: 100%
     }
-
     .layout-enlarge,
     .layout-enlarge-vert {
         padding-bottom: 90px;
-        padding-top: 90px;
+        padding-top: 90px
     }
-
     .layout-enlarge,
     .layout-enlarge-horz {
         padding-right: 60px;
-        padding-left: 60px;
+        padding-left: 60px
     }
-
     .layout-shorten,
     .layout-shorten-vert {
         padding-bottom: 25px;
         padding-top: 25px;
         position: relative;
         margin: 0 auto;
-        width: 100%;
+        width: 100%
     }
-
     .layout-shorten,
     .layout-shorten-horz {
         padding-right: 25px;
         padding-left: 25px;
         position: relative;
         margin: 0 auto;
-        width: 100%;
+        width: 100%
     }
 }
 
 .layout-left {
     position: relative;
-    float: left;
+    float: left
 }
 
 .layout-center {
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
 .layout-right {
     position: relative;
-    float: right;
+    float: right
 }
 
 .layout-contain,
 .layout-contain-large {
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
 .layout-contain-small {
     max-width: 550px;
     margin: 0 auto;
-    width: 100%;
+    width: 100%
 }
 
-@media (min-width: 300px) {
+@media (min-width:300px) {
     .layout-slim {
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 0
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width:800px) {
     .layout-contain,
     .layout-contain-large {
-        max-width: 800px;
+        max-width: 800px
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width:900px) {
     .layout-contain-small {
-        max-width: 800px;
+        max-width: 800px
     }
-
     .layout-contain,
     .layout-contain-large {
-        max-width: 1000px;
+        max-width: 1000px
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
     .layout-contain-large {
-        max-width: 1200px;
+        max-width: 1200px
     }
 }
-
-/* -- Margin -- */
 
 .layout-margin-horz {
     margin-right: 25px;
-    margin-left: 25px;
+    margin-left: 25px
 }
 
 .layout-margin-horz-small {
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 15px
 }
 
 .layout-margin-horz-mid {
     margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 20px
 }
 
 .layout-margin-horz-large {
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 50px
 }
 
 .layout-margin-horz-left {
-    margin-left: 25px;
+    margin-left: 25px
 }
 
 .layout-margin-horz-right {
-    margin-right: 25px;
+    margin-right: 25px
 }
 
 .layout-margin-horz-left-small {
-    margin-left: 15px;
+    margin-left: 15px
 }
 
 .layout-margin-horz-right-small {
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .layout-margin-horz-left-mid {
-    margin-left: 20px;
+    margin-left: 20px
 }
 
 .layout-margin-horz-right-mid {
-    margin-right: 20px;
+    margin-right: 20px
 }
 
 .layout-margin-horz-left-large {
-    margin-left: 50px;
+    margin-left: 50px
 }
 
 .layout-margin-horz-right-large {
-    margin-right: 50px;
+    margin-right: 50px
 }
 
 .layout-margin-vert {
     margin-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .layout-margin-vert-small {
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .layout-margin-vert-mid {
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .layout-margin-vert-large {
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 .layout-margin-vert-top {
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .layout-margin-vert-bottom {
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .layout-margin-vert-top-small {
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .layout-margin-vert-bottom-small {
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .layout-margin-vert-top-mid {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .layout-margin-vert-bottom-mid {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .layout-margin-vert-top-large {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 .layout-margin-vert-bottom-large {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
-/* -- Padding -- */
 
 .layout-padding-horz {
     padding-right: 25px;
-    padding-left: 25px;
+    padding-left: 25px
 }
 
 .layout-padding-horz-small {
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px
 }
 
 .layout-padding-horz-mid {
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 20px
 }
 
 .layout-padding-horz-large {
     padding-right: 50px;
-    padding-left: 50px;
+    padding-left: 50px
 }
 
 .layout-padding-horz-left {
-    padding-left: 25px;
+    padding-left: 25px
 }
 
 .layout-padding-horz-right {
-    padding-right: 25px;
+    padding-right: 25px
 }
 
 .layout-padding-horz-left-small {
-    padding-left: 15px;
+    padding-left: 15px
 }
 
 .layout-padding-horz-right-small {
-    padding-right: 15px;
+    padding-right: 15px
 }
 
 .layout-padding-horz-left-mid {
-    padding-left: 20px;
+    padding-left: 20px
 }
 
 .layout-padding-horz-right-mid {
-    padding-right: 20px;
+    padding-right: 20px
 }
 
 .layout-padding-horz-left-large {
-    padding-left: 50px;
+    padding-left: 50px
 }
 
 .layout-padding-horz-right-large {
-    padding-right: 50px;
+    padding-right: 50px
 }
 
 .layout-padding-vert {
     padding-bottom: 25px;
-    padding-top: 25px;
+    padding-top: 25px
 }
 
 .layout-padding-vert-small {
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 15px
 }
 
 .layout-padding-vert-mid {
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 .layout-padding-vert-large {
     padding-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .layout-padding-vert-top {
-    padding-top: 25px;
+    padding-top: 25px
 }
 
 .layout-padding-vert-bottom {
-    padding-bottom: 25px;
+    padding-bottom: 25px
 }
 
 .layout-padding-vert-top-small {
-    padding-top: 15px;
+    padding-top: 15px
 }
 
 .layout-padding-vert-bottom-small {
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
 .layout-padding-vert-top-mid {
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 .layout-padding-vert-bottom-mid {
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .layout-padding-vert-top-large {
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .layout-padding-vert-bottom-large {
-    padding-bottom: 50px;
+    padding-bottom: 50px
 }
-
-/* -- Rows & Columns */
 
 .layout-clearfix::after,
 .layout-clearfix::before,
@@ -960,107 +930,105 @@ li.nav-black.navbar-link a {
 .layout-row::before {
     display: table;
     content: "";
-    clear: both;
+    clear: both
 }
 
 .layout-row {
     align-items: center;
     flex-direction: row;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto
 }
 
 .layout-contain .layout-row {
-    margin-right: -0.75rem;
-    margin-left: -0.75rem;
+    margin-right: -.75rem;
+    margin-left: -.75rem
 }
 
 .layout-row [class*="layout-col"] {
-    padding: 0 0.75rem;
+    padding: 0 .75rem;
     margin-left: auto;
     min-height: 1px;
     float: left;
     right: auto;
-    left: auto;
+    left: auto
 }
 
-@media (max-width: 650px) {
+@media (max-width:650px) {
     .layout-row [class*="layout-col"] {
-        width: 100% !important;
+        width: 100%!important
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width:850px) {
     .layout-row [class*="layout-col"] {
-        width: 50%;
+        width: 50%
     }
 }
 
 .layout-col-1 {
-    width: 10.33333333333%;
+    width: 10.33333333333%
 }
 
 .layout-col-2 {
-    width: 18.6666666667%;
+    width: 18.6666666667%
 }
 
 .layout-col-3 {
-    width: 25%;
+    width: 25%
 }
 
 .layout-col-4 {
-    width: 33.33333333%;
+    width: 33.33333333%
 }
 
 .layout-col-5 {
-    width: 41.6666666667%;
+    width: 41.6666666667%
 }
 
 .layout-col-6 {
-    width: 50%;
+    width: 50%
 }
 
 .layout-col-7 {
-    width: 58.3333333333%;
+    width: 58.3333333333%
 }
 
 .layout-col-8 {
-    width: 66.66666667%;
+    width: 66.66666667%
 }
 
 .layout-col-9 {
-    width: 75%;
+    width: 75%
 }
 
 .layout-col-10 {
-    width: 83.3333333333%;
+    width: 83.3333333333%
 }
 
 .layout-col-11 {
-    width: 91.6666666667%;
+    width: 91.6666666667%
 }
 
 .layout-col-12 {
-    width: 100%;
+    width: 100%
 }
-
-/* -- Layer -- */
 
 .layer {
     transition: all 0.5s ease;
     position: relative;
-    width: 100%;
+    width: 100%
 }
 
 .layer * {
-    transition: all 0.5s ease;
+    transition: all 0.5s ease
 }
 
 .layer-header {
     font-family: sans-serif;
     position: relative;
     font-weight: 700;
-    display: block;
+    display: block
 }
 
 .layer-image {
@@ -1069,7 +1037,7 @@ li.nav-black.navbar-link a {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d
 }
 
 .layer-content {
@@ -1077,7 +1045,7 @@ li.nav-black.navbar-link a {
     position: relative;
     line-height: 28px;
     font-weight: 400;
-    display: block;
+    display: block
 }
 
 .layer-footer {
@@ -1088,16 +1056,16 @@ li.nav-black.navbar-link a {
     display: block;
     width: 100%;
     bottom: 0;
-    left: 0;
+    left: 0
 }
 
 .layer-scroll {
-    margin-bottom: 45px;
+    margin-bottom: 45px
 }
 
 .layer-scroll:after {
     box-sizing: content-box;
-    border: 0.5px solid;
+    border: .5px solid;
     position: absolute;
     overflow: visible;
     margin: 10px 0;
@@ -1106,23 +1074,23 @@ li.nav-black.navbar-link a {
     content: "";
     width: 0;
     left: 50%;
-    bottom: 0;
+    bottom: 0
 }
 
 .layer-white {
-    background-color: #fff;
+    background-color: #fff
 }
 
 .layer-grey {
-    background-color: #eee;
+    background-color: #eee
 }
 
 .layer-darkgrey {
-    background-color: #222;
+    background-color: #222
 }
 
 .layer-black {
-    background-color: #000;
+    background-color: #000
 }
 
 .layer-intro {
@@ -1132,12 +1100,12 @@ li.nav-black.navbar-link a {
     display: table;
     table-layout: fixed;
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 100px
 }
 
 .layer-intro .layout-contain {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: middle
 }
 
 .layer-intro .layer-image {
@@ -1147,12 +1115,12 @@ li.nav-black.navbar-link a {
     min-width: calc(100% - 50px);
     overflow: hidden;
     height: calc(100vh - 100px);
-    display: block;
+    display: block
 }
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
     .layer-intro {
-        padding-left: 100px;
+        padding-left: 100px
     }
     .layer-intro .layer-image {
         position: absolute;
@@ -1162,20 +1130,19 @@ li.nav-black.navbar-link a {
         min-width: calc(100% - 50px);
         overflow: hidden;
         height: 100%;
-        display: block;
+        display: block
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
     .layer-intro .layer-image {
         top: 0;
         left: 0;
         width: 100%;
-        min-width: 100%;
+        min-width: 100%
     }
-
     li.navbar-link a {
-        color: white;
+        color: white
     }
 }
 
@@ -1183,7 +1150,7 @@ li.nav-black.navbar-link a {
     position: absolute;
     width: 1000px;
     height: 1250px;
-    top: 0;
+    top: 0
 }
 
 .layer-intro .layer-header {
@@ -1194,7 +1161,7 @@ li.nav-black.navbar-link a {
     height: 100%;
     display: table-cell;
     table-layout: fixed;
-    width: 100%;
+    width: 100%
 }
 
 .layer-intro .layer-title {
@@ -1206,61 +1173,61 @@ li.nav-black.navbar-link a {
     font-size: 33px;
     font-weight: 900;
     max-width: 800px;
-    -webkit-transform: translate(0, 0) !important;
-    transform: translate(0, 0) !important;
-    color: white;
+    -webkit-transform: translate(0, 0)!important;
+    transform: translate(0, 0)!important;
+    color: white
 }
 
-@media (min-width: 375px) {
+@media (min-width:375px) {
     .layer-intro .layer-title {
-        font-size: 40px;
+        font-size: 40px
     }
 }
 
-@media (min-width: 440px) {
+@media (min-width:440px) {
     .layer-intro .layer-title {
-        font-size: 53px;
+        font-size: 53px
     }
 }
 
-@media (min-width: 490px) {
+@media (min-width:490px) {
     .layer-intro .layer-title {
         margin-right: 80px;
-        font-size: 73px;
+        font-size: 73px
     }
 }
 
-@media (min-width: 570px) {
+@media (min-width:570px) {
     .layer-intro .layer-title {
-        font-size: 93px;
+        font-size: 93px
     }
 }
 
-@media (min-width: 670px) {
+@media (min-width:670px) {
     .layer-intro .layer-title {
         font-size: 125px;
         text-align: right;
-        margin-right: 100px;
+        margin-right: 100px
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width:800px) {
     .layer-intro .layer-title {
-        font-size: 133px;
+        font-size: 133px
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
     .layer-intro .layer-title {
-        margin-right: 180px;
+        margin-right: 180px
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .layer-intro .layer-title {
         font-size: 163px;
         max-width: 1000px;
-        margin: 30px;
+        margin: 30px
     }
 }
 
@@ -1270,7 +1237,7 @@ li.nav-black.navbar-link a {
     max-width: 700px;
     width: 100%;
     margin: auto;
-    z-index: 100;
+    z-index: 100
 }
 
 .layer-intro .layer-footer {
@@ -1283,19 +1250,19 @@ li.nav-black.navbar-link a {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
-    opacity: 0;
+    opacity: 0
 }
 
-@media (max-width: 570px) {
+@media (max-width:570px) {
     .layer-intro .layer-footer {
-        display: block !important;
-        opacity: 1;
+        display: block!important;
+        opacity: 1
     }
 }
 
 .layer-intro .layer-scroll {
     transition: all 0.5s ease;
-    color: white !important;
+    color: white!important;
     position: absolute;
     margin-bottom: 0;
     overflow: visible;
@@ -1303,7 +1270,7 @@ li.nav-black.navbar-link a {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
-    bottom: 0;
+    bottom: 0
 }
 
 .layer-intro .layer-scroll:before {
@@ -1321,7 +1288,7 @@ li.nav-black.navbar-link a {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin-bottom: 10px;
-    margin-top: 0;
+    margin-top: 0
 }
 
 .layer-intro .layer-scroll:after {
@@ -1338,7 +1305,7 @@ li.nav-black.navbar-link a {
     transform: translate(-50%, 0);
     width: 0;
     left: 50%;
-    bottom: 0;
+    bottom: 0
 }
 
 .layer-intro .layer-footer:hover .layer-scroll:before {
@@ -1347,19 +1314,18 @@ li.nav-black.navbar-link a {
     top: 20px;
     margin-bottom: 0;
     margin-top: 10px;
-
     width: 15px;
-    height: 15px;
+    height: 15px
 }
 
 .layer-intro .layer-footer:hover .layer-scroll:after {
     height: 50px;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .layer-hero {
     position: relative;
-    min-height: 600px;
+    min-height: 600px
 }
 
 .layer-hero .layout {
@@ -1369,7 +1335,7 @@ li.nav-black.navbar-link a {
     padding-left: 50px;
     padding-right: 50px;
     z-index: 100;
-    margin: 0;
+    margin: 0
 }
 
 .layer-hero .layer-image {
@@ -1378,7 +1344,7 @@ li.nav-black.navbar-link a {
     overflow: hidden;
     width: 1600px;
     height: 100vh;
-    font-size: 0;
+    font-size: 0
 }
 
 .layer-hero .layer-image img {
@@ -1386,10 +1352,10 @@ li.nav-black.navbar-link a {
     display: block;
     width: 1400px;
     height: auto;
-    bottom: 0;
+    bottom: 0
 }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .layer-hero .layer-image {
         position: relative;
         display: block;
@@ -1397,22 +1363,22 @@ li.nav-black.navbar-link a {
         width: 100%;
         height: 100vh;
         max-height: 600px;
-        font-size: 0;
+        font-size: 0
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width:900px) {
     .layer-hero {
-        height: 100vh;
+        height: 100vh
     }
     .layer-hero .layout {
         position: relative;
         display: table;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, .7);
         padding-left: 80px;
         padding-right: 80px;
         min-height: 500px;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 100px)
     }
     .layer-hero .layer-image {
         position: absolute;
@@ -1422,17 +1388,17 @@ li.nav-black.navbar-link a {
         max-width: 1200px;
         height: calc(100vh - 50px);
         overflow: hidden;
-        width: 90%;
+        width: 90%
     }
     .layer-hero .layer-image img {
         min-height: 900px;
-        width: auto;
+        width: auto
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .layer-hero .layer-image {
-        width: 100%;
+        width: 100%
     }
 }
 
@@ -1445,7 +1411,7 @@ li.nav-black.navbar-link a {
     font-weight: 900;
     z-index: 100;
     color: white;
-    display: table-cell;
+    display: table-cell
 }
 
 .layer-center-box {
@@ -1457,7 +1423,7 @@ li.nav-black.navbar-link a {
     table-layout: fixed;
     padding-bottom: 0;
     padding-top: 50px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .layer-center-box .layout-contain {
@@ -1465,7 +1431,7 @@ li.nav-black.navbar-link a {
     display: table-cell;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .layer-center-box .layer-header {
@@ -1474,11 +1440,11 @@ li.nav-black.navbar-link a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: rgba(0, 0, 0, 0.16);
+    color: rgba(0, 0, 0, .16);
     z-index: 0;
     display: table;
     overflow: hidden;
-    table-layout: fixed;
+    table-layout: fixed
 }
 
 .layer-center-box .layer-title {
@@ -1487,17 +1453,17 @@ li.nav-black.navbar-link a {
     font-size: 12rem;
     display: table-cell;
     vertical-align: middle;
-    overflow: hidden;
+    overflow: hidden
 }
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
     .layer-center-box .layer-title {
         text-align: center;
         font-family: "Playfair Display", cursive;
         font-size: 12.819rem;
         display: table-cell;
         vertical-align: middle;
-        overflow: hidden;
+        overflow: hidden
     }
 }
 
@@ -1507,7 +1473,7 @@ li.nav-black.navbar-link a {
     width: 100%;
     height: 100%;
     z-index: 5;
-    padding-top: 40px;
+    padding-top: 40px
 }
 
 .layer-center-box .layer-content a {
@@ -1516,22 +1482,22 @@ li.nav-black.navbar-link a {
     white-space: nowrap;
     display: table-footer-group;
     letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: #000;
+    font-size: .8rem;
+    color: #000
 }
 
 .layer-center-box .layer-footer {
-    position: absolute;
+    position: absolute
 }
 
 .layer-center-box .layer-scroll {
-    color: black !important;
+    color: black!important
 }
 
 .layer-tile,
 .layer-tile-overlay {
     transition: all 0.2s ease;
-    width: 100%;
+    width: 100%
 }
 
 .layer-tile {
@@ -1545,12 +1511,12 @@ li.nav-black.navbar-link a {
     cursor: pointer;
     color: #fff;
     border: 0;
-    position: relative;
+    position: relative
 }
 
 .layer-tile,
 .layer-tile a {
-    display: block;
+    display: block
 }
 
 .layer-tile-overlay {
@@ -1559,7 +1525,7 @@ li.nav-black.navbar-link a {
     height: 100%;
     opacity: 0;
     left: 0;
-    top: 0;
+    top: 0
 }
 
 .layer-tile-img {
@@ -1571,11 +1537,11 @@ li.nav-black.navbar-link a {
     overflow: hidden;
     display: block;
     width: 1000px;
-    height: auto;
+    height: auto
 }
 
 .layer-tile:hover .layer-tile-overlay {
-    opacity: 0.6;
+    opacity: .6
 }
 
 .layer-tile-footer {
@@ -1584,15 +1550,15 @@ li.nav-black.navbar-link a {
     opacity: 0;
     margin: 20px;
     color: #000;
-    bottom: 0;
+    bottom: 0
 }
 
 .layer-tile:hover .layer-tile-footer {
-    opacity: 1;
+    opacity: 1
 }
 
 .layer-client {
-    color: white;
+    color: white
 }
 
 .layer-client-img {
@@ -1600,89 +1566,87 @@ li.nav-black.navbar-link a {
     height: auto;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    transition-duration: 0.5s;
+    transition-duration: 0.5s
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .layer-client-img {
-        max-width: 210px;
+        max-width: 210px
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width:1100px) {
     .layer-client-img {
-        max-width: 190px;
+        max-width: 190px
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width:992px) {
     .layer-client-img {
-        max-width: 160px;
+        max-width: 160px
     }
 }
 
-@media (min-width: 850px) {
+@media (min-width:850px) {
     .layer-client-img {
-        max-width: 200px;
+        max-width: 200px
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
     .layer-client-img {
-        max-width: 180px;
+        max-width: 180px
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width:576px) {
     .layer-client-img {
-        max-width: 170px;
+        max-width: 170px
     }
 }
 
-@media (min-width: 375px) {
+@media (min-width:375px) {
     .layer-client-img {
-        max-width: 144px;
+        max-width: 144px
     }
 }
-
-/* -- Footer -- */
 
 .footer {
     background: #000;
-    color: #fff;
+    color: #fff
 }
 
 .footer-type {
     font-size: 12px;
-    color: #777;
+    color: #777
 }
 
 .footer-content {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .footer .icons {
     font-size: 50px;
     text-align: center;
-    width: 100%;
+    width: 100%
 }
 
 .footer .layer-title {
     vertical-align: middle;
     font-family: "Fugaz One", cursive;
-    text-align: right;
+    text-align: right
 }
 
-@media (min-width: 900px) {
+@media (min-width:900px) {
     .footer .layer-title h1 {
         font-size: 80px;
-        margin-top: -15px;
+        margin-top: -15px
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
     .footer .layer-title {
         text-align: center;
-        font-size: 45px;
+        font-size: 45px
     }
 }

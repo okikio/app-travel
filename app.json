@@ -1,0 +1,17 @@
+{
+  "name": "lets-travel",
+  "description": "A web app for my lets travel.",
+  "scripts": {},
+  "env": {},
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }]
+}
