@@ -10,6 +10,9 @@ html(lang="en")
     link(async='', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css')
     link(async='', rel='stylesheet', href='https://fonts.googleapis.com/css?family=Fugaz+One|Montserrat:500,600|Playfair+Display:900')
     link(rel='stylesheet' href='./css/main.min.css')
+    // - if (!page) { 
+    link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css')
+    // - }
     
     title Let's Travel
     
@@ -39,7 +42,12 @@ html(lang="en")
     link(rel="preconnect" async href="//unsplash.com/")
   body
     include ../components/header.pug
-    include ../components/main.pug
-    include ../components/footer.pug
+    block content
+      include ../components/main.pug
+    include ../components/footer.pug  
+    
     script(src='./js/jquery.min.js')
+    //- if (page) { 
+    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js') 
+    //- }
     script(src='./js/main.min.js')

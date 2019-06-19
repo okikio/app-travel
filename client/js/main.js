@@ -29,3 +29,11 @@ function _scroll() {
 $(window).scroll(_scroll);
 $(window).resize(_scroll);
 _scroll();
+
+var prev = "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'>Previous</button>";
+var next = "<button class='slick-next slick-arrow' aria-label='Next' type='button'>Next</button>";
+
+$('.slide').slick({
+    prevArrow: prev, nextArrow: next,
+    autoplay: true, arrows: true,
+});

@@ -2,10 +2,12 @@ module.exports = {
     "error": {},
     "routers": {
         "index": {},
-        "traits": {}
+        "events": {
+            "page": "explore"
+        }
     },
     "routes": {
         "/": "index",
-        "/traits": "traits"
+        "/events": "events"
     }
 };
